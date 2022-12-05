@@ -1,43 +1,224 @@
+/*
+ * General styling
+*/
+
+* {
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow: hidden;
+}
+
 body {
-    margin: 60px auto;
-    width: 70%;
+    margin: 0;
+    min-height: 100vh;
 }
-nav ul, footer ul {
+
+.header, .content, footer {
+    position: absolute;
+    left: 0;
+    right: 0;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
+}
+
+/*
+ * Styling the nav bar/header
+*/
+
+.header {
+    /* General header styling */
+    background-color: #333;
+    top: 0;
+    --header-height: 45px;
+    height: var(--header-height);
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    /* Styling items within the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Styling text within the header */
     font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
     color: #999;
+    list-style: none;
 }
-a:hover {
+
+.header a {
+    text-decoration: none;
+}
+
+.header a:visited {
+    color: inherit;
+}
+
+.header a:hover {
+    color: white;
+}
+
+.header a:active {
+    color: white;
     text-decoration: underline;
 }
+
+/* Styling for the "desktop" version of the nav links starts here */
+
+#nav-list-desktop li {
+    text-align: right;
+    display: inline;
+    margin-right: 10px;
+    list-style: none;
+}
+
+/* Styling for the "desktop" version of the nav links ends here */
+
+/* Styling for the "mobile" version of the nav links starts here */
+
+#toggle-navbutton {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Making the three bar menu icon into a cross icon */
+
+#toggle-navbutton[aria-expanded='true'] .icon-bar:is(:first-child, :last-child) {
+    position: absolute;
+    margin: 0;
+    width: 30px;
+}
+
+#toggle-navbutton[aria-expanded='true'] .icon-bar:first-child {
+    transform: rotate(45deg);
+}
+
+#toggle-navbutton[aria-expanded='true'] .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+#toggle-navbutton[aria-expanded='true'] .icon-bar:last-child {
+    transform: rotate(-45deg);
+}
+
+#toggle-navbutton[aria-expanded='true'] + #nav-menu {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    visibility: visible;
+}
+
+#toggle-navbutton[aria-expanded='true'] + #nav-menu #nav-list-mobile {
+    padding: 1em;
+}
+
+.icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 2px;
+    background-color: white;
+}
+
+#nav-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--header-height);
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000000;
+}
+
+#nav-list-mobile {
+    list-style: none;
+    position: absolute;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin: 1.4rem;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    line-height: 170%;
+}
+
+/* Styling for the "mobile" version of the nav links ends here */
+
+/*
+ * Styling the main content of the page
+*/
+
+.content {
+    top: 45px;
+    bottom: 100px;
+    overflow: hidden;
+}
+
+.inner-content {
+    overflow: auto;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+table {
+    width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    padding: 0;
+}
+
+.profile-pic-container {
+    vertical-align: top;
+    text-align: left;
+}
+
+.profile-pic {
+    height: auto;
+    width: 30%;
+}
+
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
+
+/*
+ * Styling the footer
+*/
+
 footer {
+    bottom: 0;
+    height: 100px;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+footer ul {
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
-ul.posts li {
-    list-style: none;
+.footer-img {
+    max-width: 1.5%;
+    height: auto;
 }
