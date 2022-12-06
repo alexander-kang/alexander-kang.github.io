@@ -41,11 +41,12 @@ body {
     align-items: center;
     /* Styling text within the header */
     font-weight: bold;
-    color: #999;
     list-style: none;
+    color: white;
 }
 
 .header a {
+    color: white;
     text-decoration: none;
 }
 
@@ -54,11 +55,11 @@ body {
 }
 
 .header a:hover {
-    color: white;
+    color: #999;
 }
 
 .header a:active {
-    color: white;
+    color: #999;
     text-decoration: underline;
 }
 
