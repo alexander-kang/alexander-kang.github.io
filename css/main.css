@@ -159,7 +159,7 @@ body {
 
 .content {
     top: 45px;
-    bottom: 100px;
+    bottom: 50px;
     overflow: hidden;
 }
 
@@ -194,6 +194,7 @@ td {
 h1 {
     font-size: 3em;
 }
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
@@ -205,8 +206,10 @@ p {
 */
 
 footer {
+    padding-left: 5%;
+    padding-right: 5%;
     bottom: 0;
-    height: 100px;
+    height: 50px;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
@@ -214,11 +217,30 @@ footer {
 footer ul {
     padding: 0px;
     list-style: none;
-    font-weight: bold;
     margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-links:visited {
+    color: inherit;
+}
+
+.footer-links:hover {
+    color: #666;
+}
+
+.footer-links:active {
+    color: #666;
+    text-decoration: underline;
 }
 
 .footer-img {
-    max-width: 1.5%;
+    width: 20px;
     height: auto;
 }

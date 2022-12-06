@@ -51,4 +51,10 @@ window.onload = function () {
         resumeLink.addEventListener('click', visibilityOff);
         contactmeLink.addEventListener('click', visibilityOff);
     }
+    else {
+        let footerImages = document.getElementsByClassName('footer-img');
+        for (var i = 0; i < footerImages.length; i++) {
+            footerImages[i].style.width = '25px';
+        }
+    }
 };
