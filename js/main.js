@@ -1,6 +1,6 @@
 window.onload = function () {
     // If the window is small enough, we should replace the normal links in the nav bar with a button that shows a nav menu when clicked
-    if (window.innerWidth < 373) {
+    if (window.innerWidth < 261) {
         document.getElementById('nav-links').innerHTML = `
         <button type="button" id="toggle-navbutton" aria-controls="nav-menu" aria-label="Toggle nav menu" aria-expanded="false">
             <span class="icon-bar"></span>
@@ -10,8 +10,7 @@ window.onload = function () {
         <div id="nav-menu" aria-labelledby="toggle-navbutton">
             <ul id="nav-list-mobile">
                 <li><a id="projects-link" href="#projects">Projects</a></li>
-                <li><a id="resume-link" href="#resume">Resume</a></li>
-                <li><a id="contactme-link" href="#contactme">Contact Me</a></li>
+                <li><a id="resume-link" href="assets/Kang_Resume.pdf">Resume</a></li>
             </ul>
         </div>
         `;
@@ -23,7 +22,6 @@ window.onload = function () {
         const homeLink = document.querySelector('#home-link');
         const projectsLink = document.querySelector('#projects-link');
         const resumeLink = document.querySelector('#resume-link');
-        const contactmeLink = document.querySelector('#contactme-link');
         let isExpanded = toggle.getAttribute('aria-expanded') === 'true';
 
         // Function that toggles whether the nav menu is visible or not
@@ -49,7 +47,6 @@ window.onload = function () {
         homeLink.addEventListener('click', visibilityOff);
         projectsLink.addEventListener('click', visibilityOff);
         resumeLink.addEventListener('click', visibilityOff);
-        contactmeLink.addEventListener('click', visibilityOff);
     }
     else {
         let footerImages = document.getElementsByClassName('footer-img');
