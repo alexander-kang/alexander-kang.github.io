@@ -1,3 +1,4 @@
+// Have to wait for the window to fully load for a lot of the logic to work
 window.onload = function () {
     // If the window is small enough, we should replace the normal links in the nav bar with a button that shows a nav menu when clicked
     if (window.innerWidth < 261) {
@@ -48,10 +49,28 @@ window.onload = function () {
         projectsLink.addEventListener('click', visibilityOff);
         resumeLink.addEventListener('click', visibilityOff);
     }
+    // If the window isn't that small, we can:
+    //     * use larger footer icons for the contact info
+    //     * use a larger profile image
+    //     * use larger project images
     else {
+        // Footer icon stuff
         let footerImages = document.getElementsByClassName('footer-img');
         for (var i = 0; i < footerImages.length; i++) {
             footerImages[i].style.width = '25px';
         }
+
+        // Profile image stuff
+        let profileImage = document.getElementsByClassName('profile-pic');
+        profileImage[0].style.width = '355px';
+
+        // Project image stuff
+        let projectImages = document.getElementsByClassName('project-pic');
+        for (var i = 0; i < projectImages.length; i++) {
+            projectImages[i].style.width = '500px';
+        }
     }
 };
+
+// Make the page reload when the window is resized/dimensions change
+window.onresize = function () { location.reload(); }

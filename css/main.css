@@ -171,35 +171,54 @@ body {
     padding-right: 5%;
 }
 
-table {
-    width: 100%;
-    background-color: transparent;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-td {
-    padding: 0;
-}
-
-.profile-pic-container {
-    vertical-align: top;
-    text-align: left;
+#home {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
 }
 
 .profile-pic {
     height: auto;
-    width: 30%;
+    width: 234px;
+    border-radius: 25px;
 }
 
-h1 {
+.home-aboutme {
+    padding-left: 5%;
+}
+
+.home-aboutme h1 {
     font-size: 3em;
 }
 
-p {
-    font-size: 1.5em;
+.home-aboutme p {
+    font-size: 1.2em;
     line-height: 1.4em;
     color: #333;
+}
+
+#projects {
+    padding-bottom: 50px;
+}
+
+#projects h2 {
+    font-size: 2em;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-pic {
+    height: auto;
+    width: 234px;
+    box-shadow: 0 6px 20px rgba(51, 51, 51, 0.75);
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
 /*
