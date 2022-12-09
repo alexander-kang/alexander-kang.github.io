@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Metadata -->
+	<head>
+		<title>Alex Kang - DAQ</title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+		<script src="/js/subpage.js"></script>
+	</head>
+	<!-- Body -->
+	<body>
+		<!-- Navigation bar -->
+		<nav class="header" role="navigation">
+			<a id="home-link" href="/index.html#home">Home</a>
+			<!-- This HTML changes depending on if the screen is too narrow or not -->
+			<div id="nav-links">
+				<ul id="nav-list-desktop">
+					<li><a href="/index.html#projects">Projects</a></li>
+					<li><a href="/assets/Kang_Resume.pdf">Resume</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Main content -->
+		<div class="content">
+			<div class="inner-content">
+				<h1 class="title">NFR22 Data Acquisition System (DAQ)</h1>
+                <div class="aboutproject">
+                    <div class="showcase-imgs">
+                        <img class="showcase-img" src="/assets/daq_board.png" alt="Screenshot of the DAQ PCB layout">
+                        <img class="showcase-img" src="/assets/daq_schematic.png" alt="Screenshot of the DAQ schematic">
+                    </div>
+                    <div class="aboutproject-text">
+                        <h2>Data acquisition system on the 2021-22 Northwestern Formula Racing FSAE car (NFR22)</h2>
+                        <h2>Details</h2>
+                            <p>Originally, my job was to design, manufacture, test, and program the main data acquisition PCB on the car.</p>
+                            <p>The main PCB had the roles of:</p>
+                            <ul>
+                                <li>Taking in data from various sensors spread around the car (total of 33 inputs).</li>
+                                <li>Converting raw sensor data to properly dimensionalized values that are human-understandable.</li>
+                                <li>Sending the processed data to the base station via telemetry.</li>
+                            </ul>
+                            <p>After I got ahead of schedule, I also took on the task of two more boards:</p>
+                            <ul>
+                                <li>Intermediary daughter board:
+                                    <ul>
+                                        <li>Added functionalities of IMU & GPS that NFR21 didn't have.</li>
+                                    </ul>
+                                </li>
+                                <li>Pitot tube breakout boards:
+                                    <ul>
+                                        <li>16 of these breakouts would be mounted to the car to measure fluid flow.</li>
+                                        <li>Enables the aerodynamics subteam to make more informed design decisions.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <h2>Outcome</h2>
+                            <p>In the end, I reduced the main data acquisition PCB's size by 22% while keeping all functionality from NFR21.</p>
+                            <p>Additionally, I implemented IMU, GPS, and pitot tube support to other boards that then outputted to the main board.</p>
+                        <h2>How to get it</h2>
+                            <p>The Autodesk EAGLE files (.brd, .sch) for all the boards can be found <a href="https://github.com/alexander-kang/nfr21-daq">here</a>.</p>
+                            <p>Unfortunately, the Arduino code written to drive the boards has been lost and now only exists on the boards themselves.</p>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer>
+			<ul>
+				<li><a class="footer-links" href="mailto:alexkang2024@u.northwestern.edu"><img class="footer-img" src="/assets/gmail.png" alt="Gmail logo"></a></li>
+				<li><a class="footer-links" href="https://github.com/alexander-kang"><img class="footer-img" src="/assets/githublogo.png" alt="GitHub logo"></a></li>
+				<li><a class="footer-links" href="https://www.linkedin.com/in/akang"><img class="footer-img" src="/assets/linkedinlogo.png" alt="LinkedIn logo"></a></li>
+			</ul>
+		</footer>
+	</body>
+</html>

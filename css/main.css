@@ -305,6 +305,11 @@ footer ul {
     padding-bottom: 50px;
 }
 
+.showcase-imgs {
+    display: flex;
+    flex-direction: column;
+}
+
 .aboutproject-text {
     padding-left: 5%;
 }
@@ -317,10 +322,32 @@ footer ul {
     line-height: 25px;
 }
 
+.aboutproject-text a {
+    color: black;
+    text-decoration: underline;
+}
+
+.aboutproject-text a:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.aboutproject-text a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.aboutproject-text a:active {
+    color: #666;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .showcase-img {
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(51, 51, 51, 0.75);
     align-self: flex-start;
+    margin-bottom: 2rem;
     height: auto;
     width: 234px;
 }

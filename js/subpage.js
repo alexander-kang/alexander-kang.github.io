@@ -60,8 +60,10 @@ window.onload = function () {
         }
 
         // Showcase image stuff
-        let showcaseImage = document.getElementsByClassName('showcase-img');
-        showcaseImage[0].style.width = '415px';
+        let showcaseImages = document.getElementsByClassName('showcase-img');
+        for (var i = 0; i < showcaseImages.length; i++) {
+            showcaseImages[i].style.width = '415px';
+        }
     }
 };
 
