@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Metadata -->
+	<head>
+		<title>Alex Kang - Pong</title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+		<script src="/js/subpage.js"></script>
+	</head>
+	<!-- Body -->
+	<body>
+		<!-- Navigation bar -->
+		<nav class="header" role="navigation">
+			<a id="home-link" href="/index.html#home">Home</a>
+			<!-- This HTML changes depending on if the screen is too narrow or not -->
+			<div id="nav-links">
+				<ul id="nav-list-desktop">
+					<li><a href="/index.html#projects">Projects</a></li>
+					<li><a href="/assets/Kang_Resume.pdf">Resume</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Main content -->
+		<div class="content">
+			<div class="inner-content">
+				<h1 class="title">ARMv7 assembly Pong</h1>
+                <div class="aboutproject">
+                    <img class="showcase-img" src="/assets/pong.gif" alt="GIF of the Pong game in action">
+                    <div class="aboutproject-text">
+                        <h2>A clone of the classic game Pong (with some extra twists added) written in ARMv7 assembly</h2>
+                        <h2>Game details</h2>
+                            <p>The general idea of the game is the same as Pong (keep balls out of your goal by deflecting them with your block).</p>
+                            <p>The first player to a score of 5 wins.</p>
+                            <p>There's a few additional features added:</p>
+                            <ul>
+                                <li>Multi-frame complex explosion at a player's score number after they score a point.</li>
+                                <li>Two balls bouncing around in opposing directions to keep both players busy at all times.</li>
+                                <li>Gravity (blocks constantly fall towards the ground unless there's an upward force).</li>
+                                <li>Movement speed bonus if player touches the top of the screen with their block.</li>
+                            </ul>
+                            <p>The game is designed to be run on the CPUlator computer system simulator to simplify setup.</p>
+                        <h2>Controls</h2>
+                            <p>Using the built-in "Push buttons":</p>
+                                <ul>
+                                    <li>Keep buttons 3 and 1 pressed at all times.</li>
+                                    <li>Player on left - flick button 2:
+                                        <ul>
+                                            <li>Pressed - move up.</li>
+                                            <li>Unpressed - fall.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Player on right - flick button 0:
+                                        <ul>
+                                            <li>Pressed - move up.</li>
+                                            <li>Unpressed - fall.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            <p>Upon finishing a game, follow the instructions on-screen to restart.</p>
+                        <h2>How to get it</h2>
+                            <p>As this project was originally designed for a class, I try to keep the source code private.</p>
+                            <p>However, if you're really interested in seeing/playing with the code, feel free to send me an email.</p>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer>
+			<ul>
+				<li><a class="footer-links" href="mailto:alexkang2024@u.northwestern.edu"><img class="footer-img" src="/assets/gmail.png" alt="Gmail logo"></a></li>
+				<li><a class="footer-links" href="https://github.com/alexander-kang"><img class="footer-img" src="/assets/githublogo.png" alt="GitHub logo"></a></li>
+				<li><a class="footer-links" href="https://www.linkedin.com/in/akang"><img class="footer-img" src="/assets/linkedinlogo.png" alt="LinkedIn logo"></a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
