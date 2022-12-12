@@ -71,6 +71,3 @@ window.onload = function () {
         }
     }
 };
-
-// Make the page reload when the window is resized/dimensions change
-window.onresize = function () { location.reload(); }
