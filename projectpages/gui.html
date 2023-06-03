@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Metadata -->
+	<head>
+		<title>Alex Kang - GUI</title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+		<script src="/js/subpage.js"></script>
+	</head>
+	<!-- Body -->
+	<body>
+		<!-- Navigation bar -->
+		<nav class="header" role="navigation">
+			<a id="home-link" href="/index.html#home">Home</a>
+			<!-- This HTML changes depending on if the screen is too narrow or not -->
+			<div id="nav-links">
+				<ul id="nav-list-desktop">
+					<li><a href="/index.html#projects">Projects</a></li>
+					<li><a href="/assets/Kang_Resume.pdf">Resume</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Main content -->
+		<div class="content">
+			<div class="inner-content">
+				<h1 class="title">Northwestern PC Support File Distribution GUI</h1>
+                <div class="aboutproject">
+                    <img class="showcase-img" src="/assets/gui.png" alt="Screenshot of Northwestern PC Support File Distribution GUI">
+                    <div class="aboutproject-text">
+                        <h2>A desktop GUI app built on Tauri to distribute files across Northwestern University's engineering lab machines</h2>
+                        <h2>Details</h2>
+                            <p>This was a project for my workstudy to simplify the process of replicating files across the university's engineering lab network.</p>
+                            <p>It was very monotonous and time-consuming to manually copy and paste files across multiple labs.</p>
+                            <p>For a while, a batch script was used to automate the process.</p>
+                            <p>However, it was not very user-friendly for people that aren't tech-savvy and it was easy to make mistakes (e.g., typing file paths).</p>
+                            <p>Thus, the goal of this GUI is to solve these problems by being:</p>
+                                <ul>
+                                    <li>Robust enough to handle daily use for a variety of tasks without needing tweaking.</li>
+                                    <li>Friendly to users that might not be fully tech literate.</li>
+                                    <li>Easier to use than a similar batch script (make it harder for user to mess up).</li>
+                                    <li>Faster than manually copy and pasting files.</li>
+                                </ul>
+                            <p>The project was originally built on Electron (see <a href="https://github.com/alexander-kang/electron-dtl">here</a>) but after realizing how bloated the app was, I made the decision to migrate to Tauri.</p>
+                            <p>After doing so, the app performed better in every relevant metric and it was also a good opportunity for me to practice some Rust.</p>
+                        <h2>Features</h2>
+                            <p>To accomplish the listed goals (and more), the GUI supports the following features:</p>
+                                <ul>
+                                    <li>Copying to multiple labs at once.</li>
+                                    <li>Selecting specific systems in each lab to target.</li>
+                                    <li>Logging of successful and failed operations.</li>
+                                    <li>Both file and folder operations.</li>
+                                    <li>Runs from a single executable that can be stored on a flash drive.</li>
+                                    <li>Small (storage), lightweight (memory), and fast.</li>
+                                </ul>
+                        <h2>How to get it</h2>
+                            <p>All the code, as well as installation and use guides, can be found <a href="https://github.com/alexander-kang/tauri-dtl">here</a> for users and future maintainers.</p>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer>
+			<ul>
+				<li><a class="footer-links" href="mailto:alexkang2024@u.northwestern.edu"><img class="footer-img" src="/assets/gmail.png" alt="Gmail logo"></a></li>
+				<li><a class="footer-links" href="https://github.com/alexander-kang"><img class="footer-img" src="/assets/githublogo.png" alt="GitHub logo"></a></li>
+				<li><a class="footer-links" href="https://www.linkedin.com/in/akang"><img class="footer-img" src="/assets/linkedinlogo.png" alt="LinkedIn logo"></a></li>
+			</ul>
+		</footer>
+	</body>
+</html>

@@ -67,7 +67,8 @@ window.onload = function () {
         // Project image stuff
         let projectImages = document.getElementsByClassName('project-pic');
         for (var i = 0; i < projectImages.length; i++) {
-            projectImages[i].style.width = '500px';
+            projectImages[i].style.width = '450px';
+            projectImages[i].style.height = 'auto';
         }
     }
 };
