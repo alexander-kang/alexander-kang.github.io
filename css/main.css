@@ -351,3 +351,9 @@ footer ul {
     height: auto;
     width: 234px;
 }
+
+.caption {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.9em;
+}
